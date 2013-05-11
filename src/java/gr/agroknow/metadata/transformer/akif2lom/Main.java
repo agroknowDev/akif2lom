@@ -33,8 +33,8 @@ public class Main
 			{
 				wrong++ ;
 				System.err.println( "Wrong file : " + identifier ) ;
-				//e.printStackTrace() ;
-				//System.exit( identifier ) ;
+				e.printStackTrace() ;
+				System.exit( identifier ) ;
 			}
 		}
 		System.out.println( "#wrong : " + wrong ) ;
