@@ -239,8 +239,9 @@ public class AKIF2LOM
 					lom.append( "		<string language=\"en\">" + (String)tokenBlock.get( "ageRange" ) + "</string>\n" ) ;
 					lom.append( "	</typicalAgeRange>\n" ) ;
 			}
+			lom.append( "</educational>\n" ) ;
 		}
-		lom.append( "</educational>\n" ) ;
+		
 	}
 	
 	
