@@ -183,13 +183,14 @@ public class AKIF2LOM
 			{
 				System.err.println( "Warning: This learning object has more than one manifestation !" ) ;
 			}
-			JSONObject manifestation = (JSONObject)manifestations.get( 0 ) ;
-			JSONArray items = (JSONArray)manifestation.get( "items" ) ;
+			JSONObject manifestation = (JSONObject)manifestations.get( 0 ) ;			
+                        JSONArray items = (JSONArray)manifestation.get( "items" ) ;
 			for( Object it : items )
 			{
 				JSONObject item = (JSONObject) it ;
 				lom.append( "	<location>" + (String) item.get("url") + "</location>\n" ) ;
 			}
+                        lom.append( "	<format>" + (String) manifestation.get("parameter") + "</format>\n" ) ;
 			lom.append( "</technical>\n" ) ;
 		}
 	}
